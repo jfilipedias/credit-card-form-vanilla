@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700&display=swap" rel="stylesheet">
+  <title>Flip Card</title>
+</head>
+
+<body>
+  <form>
+    <section id="credit-card">
+      <div class="front"></div>
+      <div class="back"></div>
+    </section>
+
+    <section class="flex inputs">
+      <div class="input-wrapper">
+        <label for="credit-card-number">Número do cartão</label>
+        <input id="credit-card-number" type="text" placeholder="**** **** **** ****">
+      </div>
+
+      <div class="input-wrapper">
+        <label for="credit-card-holder">Titular do cartão</label>
+        <input id="credit-card-holder" type="text" placeholder="Nome como está no cartão" required>
+        <div class="warning">
+          <img src="https://i.ibb.co/HnYCHS8/warning.png" alt="Ícone de alerta">
+          O nome do titular é obrigatório
+        </div>
+      </div>
+
+      <div class="col-2 flex">
+        <div class="input-wrapper">
+          <label for="credit-card-validity">Validade</label>
+          <input id="credit-card-validity" type="text" placeholder="mm/aa">
+        </div>
+
+        <div class="input-wrapper">
+          <label for="credit-card-cvv" class="flex">
+            CVV
+            <img src="https://i.ibb.co/gFXJVVv/help.png" alt="Ícone de ajuda"
+              title="Esse número está, geralmente, atrás do seu cartão." />
+          </label>
+          <input id="credit-card-cvv" type="text" placeholder="***">
+        </div>
+      </div>
+    </section>
+
+    <section class="info-security flex">
+      <img src="https://i.ibb.co/S5gF5RW/shield.png" alt="Ícone de segurança" />
+      Seus dados estão seguros
+    </section>
+
+    <button type="submit">
+      Adicionar cartão
+    </button>
+  </form>
+
+  <script src="https://unpkg.com/imask"></script>
+  <script src="./index.js"></script>
+</body>
+
+</html>
